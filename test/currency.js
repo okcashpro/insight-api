@@ -72,6 +72,8 @@ describe('Currency', function() {
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
+        should.exist(response.data.bitstamp);
+        response.data.bitstamp.should.equal(237.90);
         node.log.error.callCount.should.equal(1);
         done();
       }
@@ -79,10 +81,6 @@ describe('Currency', function() {
     currency.index(req, res);
   });
 
-  /*
-   * TODO properly implement this test
-   */
-  /*
   it('will retrieve a cached value', function(done) {
     var request = sinon.stub();
     var TestCurrencyController = proxyquire('../lib/currency', {
@@ -108,6 +106,5 @@ describe('Currency', function() {
     };
     currency.index(req, res);
   });
-  */
 
 });
