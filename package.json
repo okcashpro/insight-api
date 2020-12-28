@@ -65,7 +65,7 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "okcore-lib": "git://github.com/okcashpro/okcore-lib.git",
+    "okcore-lib": "^0.13.19",
     "okcore-message": "git://github.com/okcashpro/okcore-message.git",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
